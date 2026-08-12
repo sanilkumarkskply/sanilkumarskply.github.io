@@ -181,6 +181,88 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
   text-transform:uppercase;color:var(--muted)}
 .foot-links a:hover{color:var(--brass-soft)}
 
+/* ---------- FP&A demo dashboards ---------- */
+.demo-flag{display:flex;align-items:center;gap:12px;border:1px solid var(--hair-brass);
+  background:rgba(201,162,39,0.06);padding:14px 18px;margin-bottom:40px}
+.demo-flag .dot{width:7px;height:7px;background:var(--brass);flex-shrink:0}
+.demo-flag p{font-size:13px;color:var(--ivory);margin:0}
+.demo-flag strong{color:var(--brass-soft);font-weight:500}
+
+.dash{border-top:1px solid var(--hair);padding-top:42px;margin-top:52px}
+.dash:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.dash-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.dash-num{font-size:11px;letter-spacing:.2em;color:var(--brass);font-variant-numeric:tabular-nums}
+.dash h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:29px;line-height:1.15}
+.dash .purpose{color:var(--muted);font-size:14.5px;max-width:70ch;margin-bottom:26px}
+
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--hair);margin-bottom:26px}
+.kpi{background:var(--ink);padding:18px 16px}
+.kpi .k-lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);margin-bottom:9px;line-height:1.5}
+.kpi .k-val{font-family:'Instrument Serif',serif;font-size:26px;color:var(--ivory);line-height:1;font-variant-numeric:tabular-nums}
+.kpi .k-sub{font-size:11px;margin-top:8px;font-variant-numeric:tabular-nums}
+.up{color:var(--green)} .down{color:var(--red)} .flat{color:var(--muted-2)}
+
+.chart-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);margin-bottom:26px}
+.chart-box{background:var(--ink);padding:22px 20px}
+.chart-box h5{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:16px}
+.chart-box svg{width:100%;height:auto;display:block}
+
+.vtable{width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:8px}
+.vtable th{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);
+  text-align:right;padding:10px 12px;border-bottom:1px solid var(--hair);font-weight:500}
+.vtable th:first-child{text-align:left}
+.vtable td{padding:11px 12px;text-align:right;border-bottom:1px solid var(--hair);
+  color:var(--muted);font-variant-numeric:tabular-nums}
+.vtable td:first-child{text-align:left;color:var(--ivory)}
+.vtable tr.total td{border-top:1px solid var(--hair-brass);border-bottom:none;color:var(--ivory);font-weight:500}
+.vtable tr.total td:first-child{color:var(--brass-soft)}
+
+.chip{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  padding:3px 9px;border:1px solid currentColor}
+.chip.g{color:var(--green)} .chip.a{color:var(--amber)} .chip.r{color:var(--red)}
+
+.ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);margin-top:24px}
+.ins{background:var(--ink);padding:22px 20px}
+.ins .i-lbl{font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.ins.insight-i .i-lbl{color:var(--brass)}
+.ins.risk-i .i-lbl{color:var(--amber)}
+.ins.action-i .i-lbl{color:var(--green)}
+.ins p{color:var(--muted);font-size:13.5px;margin:0}
+
+.scen{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);margin-bottom:24px}
+.scen-col{background:var(--ink);padding:22px 20px}
+.scen-col h5{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.scen-col .assump{font-size:12px;color:var(--muted-2);margin-bottom:16px;min-height:32px}
+.scen-col.base h5{color:var(--green)}
+.scen-col.up h5{color:var(--brass-soft)}
+.scen-col.dn h5{color:var(--red)}
+.scen-row{display:flex;justify-content:space-between;padding:6px 0;font-size:13px;border-bottom:1px solid var(--hair)}
+.scen-row:last-child{border-bottom:none}
+.scen-row span:first-child{color:var(--muted-2)}
+.scen-row span:last-child{color:var(--ivory);font-variant-numeric:tabular-nums}
+
+.qgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);margin-top:44px}
+.qcell{background:var(--ink);padding:24px 20px}
+.qcell .q-cat{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:10px}
+.qcell p{color:var(--ivory);font-size:14.5px;margin:0;font-family:'Instrument Serif',serif}
+
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.flow-step{border:1px solid var(--hair);padding:9px 15px;font-size:12px;color:var(--muted);letter-spacing:.04em}
+.flow-step.on{border-color:var(--hair-brass);color:var(--brass-soft)}
+.flow-arrow{color:var(--brass);font-size:13px}
+
+@media (max-width:980px){
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  .qgrid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .chart-row,.ins-grid,.scen,.qgrid{grid-template-columns:1fr}
+  .dash h3{font-size:25px}
+  .vtable{font-size:12.5px}
+  .vtable th,.vtable td{padding:9px 7px}
+}
+
 .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 
@@ -222,13 +304,14 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <div class="topbar">
   <span class="mark">SK</span>
   <nav>
-    <a href="#value">Value</a><a href="#about">About</a><a href="#capabilities">FP&amp;A</a><a href="#cycle">Cycle</a><a href="#projects">Projects</a><a href="#models">Models</a><a href="#partnering">Partnering</a><a href="#kpis">KPIs</a><a href="#experience">Experience</a><a href="#tools">Tools</a><a href="#contact">Contact</a>
+    <a href="#value">Value</a><a href="#about">About</a><a href="#fpa">FP&amp;A</a><a href="#capabilities">Skills</a><a href="#cycle">Cycle</a><a href="#projects">Projects</a><a href="#models">Models</a><a href="#partnering">Partnering</a><a href="#kpis">KPIs</a><a href="#experience">Experience</a><a href="#tools">Tools</a><a href="#contact">Contact</a>
   </nav>
 </div>
 
 <div class="sidenav">
   <a href="#value">Value</a>
   <a href="#about">About</a>
+  <a href="#fpa">FP&amp;A analysis</a>
   <a href="#capabilities">Capabilities</a>
   <a href="#cycle">FP&amp;A Cycle</a>
   <a href="#projects">Project Finance</a>
@@ -251,7 +334,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
         <p class="role-sub">Financial Analysis &nbsp;&middot;&nbsp; FP&amp;A &nbsp;&middot;&nbsp; Management Reporting &nbsp;&middot;&nbsp; Project Finance &nbsp;&middot;&nbsp; Business Intelligence</p>
         <p class="lede">Turning financial data into insights, forecasts and better business decisions.</p>
         <div class="cta-row">
-          <a class="btn" href="#projects">Project finance</a>
+          <a class="btn" href="#fpa">FP&amp;A dashboards</a>
           <a class="btn" href="#models">Models &amp; dashboards</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/sanil-kumar-a43699145" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn ghost" href="#contact">Contact</a>
@@ -283,6 +366,17 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
       <div class="vcell rv"><div class="vn">05</div><h3>Scenario thinking</h3><p>Testing what could happen if collections slip, costs rise, or a project runs long.</p></div>
       <div class="vcell rv"><div class="vn">06</div><h3>Decision support</h3><p>Helping management decide what to do next &mdash; which supplier to pay, which customer to chase, what can wait.</p></div>
     </div>
+    <div class="qgrid">
+      <div class="qcell rv"><div class="q-cat">Performance</div><p>&ldquo;Are we achieving the budget &mdash; and where exactly are we not?&rdquo;</p></div>
+      <div class="qcell rv"><div class="q-cat">Profitability</div><p>&ldquo;Why is margin moving, and which work is driving it?&rdquo;</p></div>
+      <div class="qcell rv"><div class="q-cat">Cost</div><p>&ldquo;Where are we overspending, and is it volume or rate?&rdquo;</p></div>
+      <div class="qcell rv"><div class="q-cat">Cash</div><p>&ldquo;Will we have enough cash in the coming weeks?&rdquo;</p></div>
+      <div class="qcell rv"><div class="q-cat">Working capital</div><p>&ldquo;Which receivables need attention first?&rdquo;</p></div>
+      <div class="qcell rv"><div class="q-cat">Forecast</div><p>&ldquo;What is likely to happen next, on current assumptions?&rdquo;</p></div>
+      <div class="qcell rv"><div class="q-cat">Scenario</div><p>&ldquo;What happens if revenue falls or costs rise?&rdquo;</p></div>
+      <div class="qcell rv"><div class="q-cat">Decision</div><p>&ldquo;So what should we actually do about it?&rdquo;</p></div>
+    </div>
+
   </div>
 </section>
 
@@ -325,10 +419,184 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
   </div>
 </section>
 
+
+<!-- FPA DASHBOARDS -->
+<section id="fpa">
+  <div class="shell">
+    <div class="sec-head rv"><span class="sec-num">03</span><h2>Financial analysis &amp; FP&amp;A</h2><span class="sec-rule"></span></div>
+
+    <div class="demo-flag rv">
+      <span class="dot"></span>
+      <p><strong>Illustrative portfolio data.</strong> The five dashboards below are demonstration models built to show how I structure financial analysis. The figures are invented and internally consistent across all five &mdash; they are not the results of any employer. My production systems, built for and used by my employers, are in <a href="#models" style="color:var(--brass-soft)">Models &amp; dashboards I built</a>.</p>
+    </div>
+
+    <!-- 01 EXECUTIVE -->
+    <div class="dash rv">
+      <div class="dash-head"><span class="dash-num">01</span><h3>Executive Finance &amp; Management Dashboard</h3></div>
+      <p class="purpose">The one page a managing director reads first: where revenue, margin, cash and working capital stand, and whether the direction of travel is right.</p>
+      <div class="kpis">
+        <div class="kpi"><div class="k-lbl">Revenue</div><div class="k-val">12,480</div><div class="k-sub up">&#9650; +12.0% vs prior year</div></div><div class="kpi"><div class="k-lbl">Gross profit</div><div class="k-val">4,118</div><div class="k-sub down">&#9660; &minus;0.3% vs budget</div></div><div class="kpi"><div class="k-lbl">Gross margin</div><div class="k-val">33.0%</div><div class="k-sub down">&#9660; &minus;2.0 pts vs budget</div></div><div class="kpi"><div class="k-lbl">EBITDA</div><div class="k-val">1,150</div><div class="k-sub down">&#9660; &minus;12.9% vs budget</div></div><div class="kpi"><div class="k-lbl">EBITDA margin</div><div class="k-val">9.2%</div><div class="k-sub down">&#9660; vs 11.2% budget</div></div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="k-lbl">Cash balance</div><div class="k-val">1,120</div><div class="k-sub flat">AED '000</div></div><div class="kpi"><div class="k-lbl">Accounts receivable</div><div class="k-val">3,860</div><div class="k-sub down">DSO 113 days</div></div><div class="kpi"><div class="k-lbl">Accounts payable</div><div class="k-val">2,410</div><div class="k-sub flat">DPO 105 days</div></div><div class="kpi"><div class="k-lbl">Working capital</div><div class="k-val">1,450</div><div class="k-sub flat">AR less AP</div></div><div class="kpi"><div class="k-lbl">Cash conversion</div><div class="k-val">8 days</div><div class="k-sub flat">DSO less DPO</div></div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-box"><h5>Revenue by quarter (AED '000)</h5><svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="0.0" y="31.2" width="104.5" height="118.8" fill="#C9A227" opacity=".85"/><text x="52.2" y="24.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">2,850</text><text x="52.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q1</text><rect x="118.5" y="24.6" width="104.5" height="125.4" fill="#C9A227" opacity=".85"/><text x="170.8" y="17.6" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">3,010</text><text x="170.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q2</text><rect x="237.0" y="17.5" width="104.5" height="132.5" fill="#C9A227" opacity=".85"/><text x="289.2" y="10.5" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">3,180</text><text x="289.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q3</text><rect x="355.5" y="6.7" width="104.5" height="143.3" fill="#C9A227" opacity=".85"/><text x="407.8" y="-0.3" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">3,440</text><text x="407.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q4</text><line x1="0" y1="150" x2="460" y2="150" stroke="rgba(242,239,230,0.14)"/></svg></div>
+        <div class="chart-box"><h5>Gross profit by quarter (AED '000)</h5><svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="0.0" y="30.0" width="104.5" height="120.0" fill="#C9A227" opacity=".85"/><text x="52.2" y="23.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">960</text><text x="52.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q1</text><rect x="118.5" y="25.0" width="104.5" height="125.0" fill="#C9A227" opacity=".85"/><text x="170.8" y="18.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,000</text><text x="170.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q2</text><rect x="237.0" y="20.0" width="104.5" height="130.0" fill="#C9A227" opacity=".85"/><text x="289.2" y="13.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,040</text><text x="289.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q3</text><rect x="355.5" y="10.2" width="104.5" height="139.8" fill="#C9A227" opacity=".85"/><text x="407.8" y="3.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,118</text><text x="407.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q4</text><line x1="0" y1="150" x2="460" y2="150" stroke="rgba(242,239,230,0.14)"/></svg></div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-box"><h5>EBITDA by quarter (AED '000)</h5><svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="0.0" y="31.8" width="104.5" height="118.2" fill="#C9A227" opacity=".85"/><text x="52.2" y="24.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">268</text><text x="52.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q1</text><rect x="118.5" y="26.5" width="104.5" height="123.5" fill="#C9A227" opacity=".85"/><text x="170.8" y="19.5" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">280</text><text x="170.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q2</text><rect x="237.0" y="21.2" width="104.5" height="128.8" fill="#C9A227" opacity=".85"/><text x="289.2" y="14.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">292</text><text x="289.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q3</text><rect x="355.5" y="13.2" width="104.5" height="136.8" fill="#C9A227" opacity=".85"/><text x="407.8" y="6.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">310</text><text x="407.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Q4</text><line x1="0" y1="150" x2="460" y2="150" stroke="rgba(242,239,230,0.14)"/></svg></div>
+        <div class="chart-box"><h5>Budget vs actual (AED '000)</h5><svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="0.0" y="13.8" width="104.5" height="136.2" fill="#5F6B7E" opacity=".85"/><text x="52.2" y="6.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">11,800</text><text x="52.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Revenue B</text><rect x="118.5" y="6.0" width="104.5" height="144.0" fill="#C9A227" opacity=".85"/><text x="170.8" y="-1.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">12,480</text><text x="170.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Revenue A</text><rect x="237.0" y="134.8" width="104.5" height="15.2" fill="#5F6B7E" opacity=".85"/><text x="289.2" y="127.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,320</text><text x="289.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">EBITDA B</text><rect x="355.5" y="136.7" width="104.5" height="13.3" fill="#C4685F" opacity=".85"/><text x="407.8" y="129.7" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,150</text><text x="407.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">EBITDA A</text><line x1="0" y1="150" x2="460" y2="150" stroke="rgba(242,239,230,0.14)"/></svg></div>
+      </div>
+      <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>Revenue grew 12% on the prior year and beat budget, but gross margin fell two points and EBITDA finished below plan. Growth is being bought rather than earned &mdash; the extra revenue arrived carrying almost all of its own cost.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>If delivery cost keeps rising faster than revenue, further growth reduces profit rather than adding to it. Receivables at 113 days mean that profit is also slow to become cash.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Investigate direct cost drivers by project and department before accepting more volume at current pricing. Review pricing on the work types where margin has fallen most.</p></div></div>
+    </div>
+
+    <!-- 02 BUDGET VS ACTUAL -->
+    <div class="dash rv">
+      <div class="dash-head"><span class="dash-num">02</span><h3>Budget vs Actual &amp; Variance Analysis</h3></div>
+      <p class="purpose">A variance table is only the start. The value is in the next three columns of thinking: what moved, why it moved, and what to do about it.</p>
+      <div class="flow">
+        <span class="flow-step on">Budget</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step on">Actual</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step on">Variance</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step on">Root cause</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step on">Recommendation</span>
+      </div>
+      <table class="vtable">
+        <thead><tr><th>AED '000</th><th>Budget</th><th>Actual</th><th>Variance</th><th>Var %</th><th>&nbsp;</th></tr></thead>
+        <tbody>
+          <tr><td>Revenue</td><td>11,800</td><td>12,480</td><td class="up">+680</td><td class="up">+5.8%</td><td><span class="chip g">Fav</span></td></tr>
+          <tr><td>Direct project cost</td><td>(7,670)</td><td>(8,362)</td><td class="down">(692)</td><td class="down">+9.0%</td><td><span class="chip r">Adv</span></td></tr>
+          <tr><td>Gross profit</td><td>4,130</td><td>4,118</td><td class="down">(12)</td><td class="down">&minus;0.3%</td><td><span class="chip a">Adv</span></td></tr>
+          <tr><td>Gross margin %</td><td>35.0%</td><td>33.0%</td><td class="down">&minus;2.0 pts</td><td>&mdash;</td><td><span class="chip r">Adv</span></td></tr>
+          <tr><td>Payroll</td><td>(1,820)</td><td>(1,940)</td><td class="down">(120)</td><td class="down">+6.6%</td><td><span class="chip r">Adv</span></td></tr>
+          <tr><td>Operating expenses</td><td>(990)</td><td>(1,028)</td><td class="down">(38)</td><td class="down">+3.8%</td><td><span class="chip a">Adv</span></td></tr>
+          <tr class="total"><td>EBITDA</td><td>1,320</td><td>1,150</td><td class="down">(170)</td><td class="down">&minus;12.9%</td><td><span class="chip r">Adv</span></td></tr>
+        </tbody>
+      </table>
+      <p class="purpose" style="margin-top:20px"><strong style="color:var(--ivory);font-weight:500">Root cause.</strong> Revenue beat plan by 5.8%, but direct project cost rose 9.0% &mdash; faster than the revenue that carried it. Gross margin fell two points, so the additional revenue arrived with almost no additional gross profit attached. Payroll and operating expenses then ran ahead of plan on top, and EBITDA finished 12.9% below budget despite a good top line.</p>
+      <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>The favourable revenue variance is misleading on its own. Read against direct cost, it shows a business winning work at a lower effective margin than it planned for.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>Payroll and operating expenses both ran ahead of plan while gross profit stood still &mdash; so the entire revenue gain was absorbed below the gross profit line.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Break the direct cost variance down by project to separate volume effect from rate effect. Freeze discretionary operating spend until margin recovers to plan.</p></div></div>
+    </div>
+
+    <!-- 03 FORECAST -->
+    <div class="dash rv">
+      <div class="dash-head"><span class="dash-num">03</span><h3>Financial Forecast &amp; Scenario Planning</h3></div>
+      <p class="purpose">A forecast is a set of assumptions with numbers attached. Scenario planning tests which of those assumptions the business can actually survive being wrong about.</p>
+      <div class="flow">
+        <span class="flow-step">Historical actuals</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Financial drivers</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step">Forecast</span><span class="flow-arrow">&rarr;</span>
+        <span class="flow-step on">Scenario analysis</span>
+      </div>
+      <div class="scen">
+        <div class="scen-col base">
+          <h5>&#9679; Base case</h5>
+          <div class="assump">Current run rate continues. Revenue +12% year on year, cost structure unchanged.</div>
+          <div class="scen-row"><span>Revenue</span><span>12,480</span></div>
+          <div class="scen-row"><span>Gross profit</span><span>4,118</span></div>
+          <div class="scen-row"><span>Gross margin</span><span>33.0%</span></div>
+          <div class="scen-row"><span>EBITDA</span><span>1,150</span></div>
+          <div class="scen-row"><span>EBITDA margin</span><span>9.2%</span></div>
+        </div>
+        <div class="scen-col up">
+          <h5>&#9679; Upside case</h5>
+          <div class="assump">Revenue +8% above base on pipeline conversion, direct cost scaling with volume.</div>
+          <div class="scen-row"><span>Revenue</span><span>13,478</span></div>
+          <div class="scen-row"><span>Gross profit</span><span>4,447</span></div>
+          <div class="scen-row"><span>Gross margin</span><span>33.0%</span></div>
+          <div class="scen-row"><span>EBITDA</span><span>1,479</span></div>
+          <div class="scen-row"><span>EBITDA margin</span><span>11.0%</span></div>
+        </div>
+        <div class="scen-col dn">
+          <h5>&#9679; Downside case</h5>
+          <div class="assump">Revenue &minus;10% on project deferral, fixed cost base unchanged in the short term.</div>
+          <div class="scen-row"><span>Revenue</span><span>11,232</span></div>
+          <div class="scen-row"><span>Gross profit</span><span>3,706</span></div>
+          <div class="scen-row"><span>Gross margin</span><span>33.0%</span></div>
+          <div class="scen-row"><span>EBITDA</span><span>738</span></div>
+          <div class="scen-row"><span>EBITDA margin</span><span>6.6%</span></div>
+        </div>
+      </div>
+      <table class="vtable">
+        <thead><tr><th>Sensitivity &mdash; single driver moved</th><th>EBITDA</th><th>Change</th><th>Cash impact</th></tr></thead>
+        <tbody>
+          <tr><td>Base case</td><td>1,150</td><td class="flat">&mdash;</td><td class="flat">&mdash;</td></tr>
+          <tr><td>Revenue falls 10%</td><td>738</td><td class="down">(412)</td><td class="down">Lower collections follow with a lag</td></tr>
+          <tr><td>Labour cost rises 8%</td><td>995</td><td class="down">(155)</td><td class="down">Immediate &mdash; payroll is paid monthly</td></tr>
+          <tr><td>Collections delayed 30 days</td><td>1,150</td><td class="flat">No P&amp;L effect</td><td class="down">(1,026) of cash</td></tr>
+        </tbody>
+      </table>
+      <p class="purpose" style="margin-top:20px"><strong style="color:var(--ivory);font-weight:500">The point of the last row.</strong> A 30-day collection delay does nothing to profit and takes more than a million out of cash. Profit and liquidity are different questions, and a business can fail the second while passing the first.</p>
+      <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>The business is more sensitive to labour cost and collection timing than to a moderate revenue fall. A 10% revenue drop costs 412 of EBITDA; a 30-day collection delay costs over a million in cash and nothing in profit.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>The downside case leaves EBITDA margin at 6.6%. Combined with a collection delay, that is a liquidity problem well before it becomes a profitability problem.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Hold a minimum cash buffer sized against the downside case, not the base case. Tighten collection terms before adding fixed cost.</p></div></div>
+    </div>
+
+    <!-- 04 PROJECT -->
+    <div class="dash rv">
+      <div class="dash-head"><span class="dash-num">04</span><h3>Project Financial Performance &amp; Cost Control</h3>
+        <span class="chip r">Cost overrun risk</span></div>
+      <p class="purpose">A single contract, viewed the way a project controller has to view it: not what has been spent, but what it will cost by completion, and whether the margin priced at tender still survives.</p>
+      <div class="kpis">
+        <div class="kpi"><div class="k-lbl">Contract revenue</div><div class="k-val">4,200</div><div class="k-sub flat">AED '000</div></div><div class="kpi"><div class="k-lbl">Budget at tender</div><div class="k-val">3,360</div><div class="k-sub flat">20.0% margin</div></div><div class="kpi"><div class="k-lbl">Estimate at completion</div><div class="k-val">3,680</div><div class="k-sub down">&#9660; 320 over budget</div></div><div class="kpi"><div class="k-lbl">Forecast gross profit</div><div class="k-val">520</div><div class="k-sub down">&#9660; from 840</div></div><div class="kpi"><div class="k-lbl">Forecast margin</div><div class="k-val">12.4%</div><div class="k-sub down">&#9660; &minus;7.6 pts</div></div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-box"><h5>Cost incurred to date by category (AED '000)</h5><svg viewBox="0 0 460 126" xmlns="http://www.w3.org/2000/svg" role="img"><text x="0" y="15" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">Direct labour</text><rect x="92" y="5" width="246.9" height="13" fill="#C9A227" opacity=".85"/><text x="346.9" y="16" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,280</text><text x="0" y="45" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">Subcontractor</text><rect x="92" y="35" width="189.0" height="13" fill="#D9A441" opacity=".85"/><text x="289.0" y="46" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">980</text><text x="0" y="75" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">Material</text><rect x="92" y="65" width="100.3" height="13" fill="#5FA47A" opacity=".85"/><text x="200.3" y="76" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">520</text><text x="0" y="105" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">Overheads</text><rect x="92" y="95" width="30.9" height="13" fill="#5F6B7E" opacity=".85"/><text x="130.9" y="106" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">160</text></svg></div>
+        <div class="chart-box">
+          <h5>Cost to completion</h5>
+          <table class="vtable">
+            <tbody>
+              <tr><td>Cost incurred to date</td><td>2,940</td></tr>
+              <tr><td>Committed &mdash; ordered, not incurred</td><td>480</td></tr>
+              <tr><td>Remaining cost to complete</td><td>260</td></tr>
+              <tr class="total"><td>Estimate at completion</td><td>3,680</td></tr>
+              <tr><td>Budget at tender</td><td>3,360</td></tr>
+              <tr class="total"><td>Forecast overrun</td><td class="down">(320)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <table class="vtable">
+        <thead><tr><th>Margin position</th><th>At tender</th><th>Forecast</th><th>Movement</th><th>&nbsp;</th></tr></thead>
+        <tbody>
+          <tr><td>Contract revenue</td><td>4,200</td><td>4,200</td><td class="flat">&mdash;</td><td>&nbsp;</td></tr>
+          <tr><td>Total cost</td><td>3,360</td><td>3,680</td><td class="down">(320)</td><td><span class="chip r">Adv</span></td></tr>
+          <tr class="total"><td>Gross profit</td><td>840</td><td>520</td><td class="down">(320)</td><td>&nbsp;</td></tr>
+          <tr class="total"><td>Gross margin</td><td>20.0%</td><td>12.4%</td><td class="down">&minus;7.6 pts</td><td><span class="chip r">Adv</span></td></tr>
+        </tbody>
+      </table>
+      <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>The project will finish 320 over its tender budget, cutting the margin from 20.0% to 12.4%. Two-thirds of the overrun is already committed rather than merely forecast &mdash; so most of it can no longer be avoided.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>Committed cost of 480 against only 260 of remaining work suggests procurement ran ahead of the programme. If scope grows further, the remaining margin absorbs it.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Escalate the variation claim on scope already delivered, and freeze further commitments until the cost-to-complete is re-based with the delivery team.</p></div></div>
+    </div>
+
+    <!-- 05 WORKING CAPITAL -->
+    <div class="dash rv">
+      <div class="dash-head"><span class="dash-num">05</span><h3>Working Capital &amp; Cash Conversion</h3></div>
+      <p class="purpose">Profit is an opinion until it is collected. This is where the money actually sits, how long it stays there, and which balances are turning into risk.</p>
+      <div class="kpis">
+        <div class="kpi"><div class="k-lbl">Total receivables</div><div class="k-val">3,860</div><div class="k-sub down">24% over 60 days</div></div><div class="kpi"><div class="k-lbl">Total payables</div><div class="k-val">2,410</div><div class="k-sub flat">7% over 60 days</div></div><div class="kpi"><div class="k-lbl">DSO</div><div class="k-val">113 days</div><div class="k-sub down">collection period</div></div><div class="kpi"><div class="k-lbl">DPO</div><div class="k-val">105 days</div><div class="k-sub flat">payment period</div></div><div class="kpi"><div class="k-lbl">Cash conversion cycle</div><div class="k-val">8 days</div><div class="k-sub flat">cash tied up</div></div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-box"><h5>Accounts receivable ageing (AED '000)</h5><svg viewBox="0 0 460 126" xmlns="http://www.w3.org/2000/svg" role="img"><text x="0" y="15" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">0 – 30 days</text><rect x="92" y="5" width="260.6" height="13" fill="#5FA47A" opacity=".85"/><text x="360.6" y="16" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,930</text><text x="0" y="45" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">31 – 60 days</text><rect x="92" y="35" width="136.3" height="13" fill="#C9A227" opacity=".85"/><text x="236.3" y="46" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,010</text><text x="0" y="75" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">61 – 90 days</text><rect x="92" y="65" width="72.9" height="13" fill="#D9A441" opacity=".85"/><text x="172.9" y="76" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">540</text><text x="0" y="105" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">90+ days</text><rect x="92" y="95" width="51.3" height="13" fill="#C4685F" opacity=".85"/><text x="151.3" y="106" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">380</text></svg></div>
+        <div class="chart-box"><h5>Accounts payable ageing (AED '000)</h5><svg viewBox="0 0 460 126" xmlns="http://www.w3.org/2000/svg" role="img"><text x="0" y="15" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">0 – 30 days</text><rect x="92" y="5" width="159.3" height="13" fill="#5FA47A" opacity=".85"/><text x="259.3" y="16" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,180</text><text x="0" y="45" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">31 – 60 days</text><rect x="92" y="35" width="97.2" height="13" fill="#C9A227" opacity=".85"/><text x="197.2" y="46" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">720</text><text x="0" y="75" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">61 – 90 days</text><rect x="92" y="65" width="45.9" height="13" fill="#D9A441" opacity=".85"/><text x="145.9" y="76" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">340</text><text x="0" y="105" font-family="Inter,sans-serif" font-size="11" fill="#8E99AC">90+ days</text><rect x="92" y="95" width="23.0" height="13" fill="#C4685F" opacity=".85"/><text x="123.0" y="106" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">170</text></svg></div>
+      </div>
+      <table class="vtable">
+        <thead><tr><th>Receivable ageing</th><th>Amount</th><th>Share</th><th>Assessment</th></tr></thead>
+        <tbody>
+          <tr><td>0 &ndash; 30 days</td><td>1,930</td><td>50%</td><td><span class="chip g">Current</span></td></tr>
+          <tr><td>31 &ndash; 60 days</td><td>1,010</td><td>26%</td><td><span class="chip g">Within terms</span></td></tr>
+          <tr><td>61 &ndash; 90 days</td><td>540</td><td>14%</td><td><span class="chip a">Follow up</span></td></tr>
+          <tr><td>90+ days</td><td>380</td><td>10%</td><td><span class="chip r">Collection risk</span></td></tr>
+          <tr class="total"><td>Total receivables</td><td>3,860</td><td>100%</td><td>&nbsp;</td></tr>
+        </tbody>
+      </table>
+      <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>Half of receivables are current, but 24% sit beyond 60 days and 380 has passed 90. Payables are ageing more slowly than receivables, so the business is funding its customers.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>The 90+ bucket is where collection probability falls sharply. Held long enough, it stops being a receivable and becomes a bad debt provision.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Prioritise collection above 60 days before chasing current balances. Check the trade licence status of every customer in the 90+ bucket &mdash; a lapsed licence often explains a stalled payment.</p></div></div>
+    </div>
+
+  </div>
+</section>
+
 <!-- CAPABILITIES -->
 <section id="capabilities">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">03</span><h2>Finance &amp; FP&amp;A capabilities</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">04</span><h2>Finance &amp; FP&amp;A capabilities</h2><span class="sec-rule"></span></div>
     <div class="cap-grid">
       <div class="cap-col rv">
         <h4>FP&amp;A</h4>
@@ -369,7 +637,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- FP&A CYCLE -->
 <section id="cycle">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">04</span><h2>The FP&amp;A cycle</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">05</span><h2>The FP&amp;A cycle</h2><span class="sec-rule"></span></div>
     <p class="intro rv">Reporting is not the end of the process &mdash; it is the start of it. This is the loop the work sits inside.</p>
     <div class="rv">
       <svg viewBox="0 0 1100 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto" role="img" aria-label="FP&amp;A cycle: actual performance, variance analysis, root cause, forecast, scenario planning, management decision, action and monitoring">
@@ -426,7 +694,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- PROJECT FINANCE -->
 <section id="projects">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">05</span><h2>Project finance &amp; cost control</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">06</span><h2>Project finance &amp; cost control</h2><span class="sec-rule"></span></div>
     <p class="intro rv">Cost accounting and financial analysis across DEWA network and district-cooling infrastructure works &mdash; tracking project cost against budget, analysing variance, and reporting financial performance to support project management decisions.</p>
     <div class="plist rv">
       <div class="prow">
@@ -468,7 +736,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- MODELS -->
 <section id="models">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">06</span><h2>Models &amp; dashboards I built</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">07</span><h2>Models &amp; dashboards I built</h2><span class="sec-rule"></span></div>
     <p class="intro rv">Five working systems, designed and built in Advanced Excel and Power Query. These are not practice exercises &mdash; each one was built to solve a live problem in the business and is still in daily use. Each is presented the way it is actually used: the business problem, the analysis, and the decision it supports.</p>
     <div class="cards">
 
@@ -548,7 +816,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- PARTNERING -->
 <section id="partnering">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">07</span><h2>Finance business partnering</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">08</span><h2>Finance business partnering</h2><span class="sec-rule"></span></div>
     <p class="intro rv">Finance is only useful where it meets the rest of the business. These are the conversations the work above actually sits inside.</p>
     <div class="vgrid">
       <div class="vcell rv"><div class="vn">01</div><h3>Operations</h3><p>Project cost against budget, cost to complete, and where delivery cost is eroding the margin assumed at tender.</p></div>
@@ -564,7 +832,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- KPIS -->
 <section id="kpis">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">08</span><h2>Key finance KPIs</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">09</span><h2>Key finance KPIs</h2><span class="sec-rule"></span></div>
     <p class="intro rv">The measures I report and analyse, and what each one is actually asking.</p>
     <div class="kpi-grid">
       <div class="kpi-block rv">
@@ -612,7 +880,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">09</span><h2>Experience</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">10</span><h2>Experience</h2><span class="sec-rule"></span></div>
 
     <div class="job rv">
       <div class="when">Nov 2022 &mdash; Present</div>
@@ -691,7 +959,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- WRITING -->
 <section id="writing">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">10</span><h2>Technical writing &amp; knowledge sharing</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">11</span><h2>Technical writing &amp; knowledge sharing</h2><span class="sec-rule"></span></div>
     <p class="intro rv">UAE Corporate Tax is new, and most accountants filing a return have never filed one before. I file mine, so I wrote down how it works &mdash; then built the workbook that goes with it.</p>
     <div class="cards">
       <div class="card rv">
@@ -718,7 +986,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- TOOLS -->
 <section id="tools">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">11</span><h2>Tools &amp; technology</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">12</span><h2>Tools &amp; technology</h2><span class="sec-rule"></span></div>
     <div class="cap-grid">
       <div class="cap-col rv">
         <h4>Excel</h4>
@@ -776,7 +1044,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- CONTACT -->
 <section id="contact">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">12</span><h2>Get in touch</h2><span class="sec-rule"></span></div>
+    <div class="sec-head rv"><span class="sec-num">13</span><h2>Get in touch</h2><span class="sec-rule"></span></div>
     <p class="intro rv">Open to finance, FP&amp;A and project finance opportunities with multinational organisations in the UAE &mdash; particularly engineering, infrastructure, construction, consulting and technology.</p>
     <div class="contact-grid rv">
       <a class="cbox" href="mailto:sanilkumarskply@gmail.com"><div class="lbl">Email</div><div class="val">sanilkumarskply@gmail.com</div></a>
