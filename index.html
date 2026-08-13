@@ -94,6 +94,10 @@ h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.2
 .skill-block{margin-bottom:28px}
 .skill-block h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);
   font-weight:500;margin-bottom:12px}
+.skill-block h4{display:flex;align-items:center;gap:9px}
+.skill-block h4 .hd-ico{flex:none;width:15px;height:15px;color:var(--brass);opacity:.95}
+.skill-block h4.hd-lg{font-size:13.5px;letter-spacing:.14em;font-weight:600;color:var(--brass-soft);gap:11px;margin-bottom:16px}
+.skill-block h4.hd-lg .hd-ico{width:19px;height:19px;stroke-width:1.9;opacity:1}
 
 /* value grid */
 .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair)}
@@ -133,6 +137,32 @@ h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.2
 .card .shot img{width:100%;display:block}
 .card .shot figcaption{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--muted-2);padding:10px 28px;border-top:1px solid var(--hair)}
+/* --- Models accordion --- */
+#models .cards{grid-template-columns:1fr}
+#models .card.wide{grid-column:auto}
+#models .card{padding:0}
+#models .card:hover{background:var(--ink)}
+#models .card-head{margin:0;font-size:inherit;font-weight:400}
+#models .card-toggle{display:flex;align-items:center;gap:20px;width:100%;background:none;border:0;margin:0;padding:22px 28px;color:inherit;text-align:left;cursor:pointer;font-family:inherit;transition:background .3s ease}
+#models .card-toggle:hover{background:var(--ink-2)}
+#models .card-toggle:focus-visible{outline:1px solid var(--brass);outline-offset:-3px}
+#models .ch-text{flex:1;min-width:0}
+#models .card .idx{display:block}
+#models .card-title{display:block;font-family:'Instrument Serif',serif;font-weight:400;font-size:25px;line-height:1.2;margin:9px 0 5px;color:var(--ivory);transition:color .25s ease}
+#models .card-toggle:hover .card-title{color:var(--brass-soft)}
+#models .card .sub{display:block;margin-bottom:9px}
+#models .card .builtfor{display:block;padding-bottom:0;margin-bottom:0;border-bottom:none}
+#models .dash-cue{flex:none;display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 15px;border:1px solid var(--hair-brass);border-radius:100px;background:rgba(201,162,39,.07);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);white-space:nowrap;transition:background .25s ease,border-color .25s ease,color .25s ease}
+#models .card-toggle:hover .dash-cue{background:rgba(201,162,39,.18);border-color:var(--brass);color:var(--brass-soft)}
+#models .dash-chev{width:14px;height:14px;flex:none;transition:transform .35s ease}
+#models .card[data-open="true"] .dash-chev{transform:rotate(180deg)}
+#models .card-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s cubic-bezier(.4,0,.2,1)}
+#models .card[data-open="true"] .card-body{grid-template-rows:1fr}
+#models .card-body-in{overflow:hidden;min-height:0}
+#models .card[data-open="true"] .card-body-in{padding:0 28px 30px}
+#models .card-body-in>p:first-child{margin-top:0}
+@media (min-width:901px) and (max-width:1540px){#models .card-toggle{padding-right:158px}}
+@media (max-width:520px){#models .cue-txt{display:none}#models .dash-cue{padding:8px}#models .card-toggle{padding:20px 18px;gap:12px}#models .card[data-open="true"] .card-body-in{padding:0 18px 24px}}
 
 /* jobs */
 .job{display:grid;grid-template-columns:180px 1fr;gap:32px;padding:30px 0;border-top:1px solid var(--hair)}
@@ -194,6 +224,30 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 .dash-num{font-size:11px;letter-spacing:.2em;color:var(--brass);font-variant-numeric:tabular-nums}
 .dash h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:29px;line-height:1.15}
 .dash .purpose{color:var(--muted);font-size:14.5px;max-width:70ch;margin-bottom:26px}
+/* --- FP&A accordion --- */
+#fpa .dash{padding-top:0;margin-top:0;border-top:1px solid var(--hair)}
+#fpa .dash:first-of-type{margin-top:22px;border-top:1px solid var(--hair)}
+#fpa .dash-head{display:block;margin-bottom:0;font-size:inherit}
+#fpa .dash-toggle{display:flex;align-items:center;gap:14px;flex-wrap:wrap;width:100%;background:none;border:0;margin:0;padding:19px 2px;color:inherit;text-align:left;cursor:pointer;font-family:inherit}
+#fpa .dash-toggle:focus-visible{outline:1px solid var(--brass);outline-offset:3px}
+#fpa .dash-num{font-size:11px;letter-spacing:.2em;color:var(--brass);font-variant-numeric:tabular-nums}
+#fpa .dash-title{font-family:'Instrument Serif',serif;font-weight:400;font-size:29px;line-height:1.15;color:var(--ivory);transition:color .25s ease}
+#fpa .dash-toggle:hover .dash-title{color:var(--brass-soft)}
+#fpa .dash-cue{margin-left:auto;flex:none;display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 15px;border:1px solid var(--hair-brass);border-radius:100px;background:rgba(201,162,39,.07);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);white-space:nowrap;transition:background .25s ease,border-color .25s ease,color .25s ease}
+#fpa .dash-toggle:hover .dash-cue{background:rgba(201,162,39,.18);border-color:var(--brass);color:var(--brass-soft)}
+#fpa .dash-chev{width:14px;height:14px;flex:none;transition:transform .35s ease}
+#fpa .dash[data-open="true"] .dash-chev{transform:rotate(180deg)}
+.fpa-hint{display:flex;align-items:center;gap:9px;color:var(--muted-2);font-size:12.5px;line-height:1.4;margin:14px 0 0}
+.fpa-hint svg{width:13px!important;height:13px!important;min-width:13px;flex:0 0 13px;color:var(--brass);display:block}
+@media (min-width:901px) and (max-width:1540px){#fpa .dash-toggle{padding-right:158px}}
+@media (max-width:520px){#fpa .cue-txt{display:none}#fpa .dash-cue{padding:8px}}
+#fpa .dash-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s cubic-bezier(.4,0,.2,1)}
+#fpa .dash[data-open="true"] .dash-body{grid-template-rows:1fr}
+#fpa .dash-body-in{overflow:hidden;min-height:0}
+#fpa .dash[data-open="true"] .dash-body-in{padding-bottom:16px}
+@media (prefers-reduced-motion:reduce){#fpa .dash-body,#fpa .dash-chev{transition:none}}
+@media (max-width:640px){#fpa .dash-title{font-size:23px}#fpa .dash-toggle{padding:18px 2px;gap:10px}}
+
 
 .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--hair);margin-bottom:26px}
 .kpi{background:var(--ink);padding:18px 16px}
@@ -432,9 +486,16 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
       <p><strong>Illustrative portfolio data.</strong> The five dashboards below are demonstration models built to show how I structure financial analysis. The figures are invented and internally consistent across all five &mdash; they are not the results of any employer. My production systems, built for and used by my employers, are in <a href="#models" style="color:var(--brass-soft)">Models &amp; dashboards I built</a>.</p>
     </div>
 
+    <p class="fpa-hint rv"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>Click any dashboard title to view the model behind it. Section 01 is open to start.</p>
+
     <!-- 01 EXECUTIVE -->
-    <div class="dash rv">
-      <div class="dash-head"><span class="dash-num">01</span><h3>Executive Finance &amp; Management Dashboard</h3></div>
+    <div class="dash rv" data-open="true">
+      <h3 class="dash-head">
+        <button class="dash-toggle" type="button" aria-expanded="true" aria-controls="fpa-p01">
+          <span class="dash-num">01</span><span class="dash-title">Executive Finance &amp; Management Dashboard</span><span class="dash-cue"><span class="cue-txt">Hide model</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+      </h3>
+      <div class="dash-body" id="fpa-p01"><div class="dash-body-in">
       <p class="purpose">The one page a managing director reads first: where revenue, margin, cash and working capital stand, and whether the direction of travel is right.</p>
       <div class="kpis">
         <div class="kpi"><div class="k-lbl">Revenue</div><div class="k-val">12,480</div><div class="k-sub up">&#9650; +12.0% vs prior year</div></div><div class="kpi"><div class="k-lbl">Gross profit</div><div class="k-val">4,118</div><div class="k-sub down">&#9660; &minus;0.3% vs budget</div></div><div class="kpi"><div class="k-lbl">Gross margin</div><div class="k-val">33.0%</div><div class="k-sub down">&#9660; &minus;2.0 pts vs budget</div></div><div class="kpi"><div class="k-lbl">EBITDA</div><div class="k-val">1,150</div><div class="k-sub down">&#9660; &minus;12.9% vs budget</div></div><div class="kpi"><div class="k-lbl">EBITDA margin</div><div class="k-val">9.2%</div><div class="k-sub down">&#9660; vs 11.2% budget</div></div>
@@ -451,11 +512,17 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
         <div class="chart-box"><h5>Budget vs actual (AED '000)</h5><svg viewBox="0 0 460 180" xmlns="http://www.w3.org/2000/svg" role="img"><rect x="0.0" y="13.8" width="104.5" height="136.2" fill="#5F6B7E" opacity=".85"/><text x="52.2" y="6.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">11,800</text><text x="52.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Revenue B</text><rect x="118.5" y="6.0" width="104.5" height="144.0" fill="#C9A227" opacity=".85"/><text x="170.8" y="-1.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">12,480</text><text x="170.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">Revenue A</text><rect x="237.0" y="134.8" width="104.5" height="15.2" fill="#5F6B7E" opacity=".85"/><text x="289.2" y="127.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,320</text><text x="289.2" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">EBITDA B</text><rect x="355.5" y="136.7" width="104.5" height="13.3" fill="#C4685F" opacity=".85"/><text x="407.8" y="129.7" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#F2EFE6">1,150</text><text x="407.8" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#5F6B7E" letter-spacing="1">EBITDA A</text><line x1="0" y1="150" x2="460" y2="150" stroke="rgba(242,239,230,0.14)"/></svg></div>
       </div>
       <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>Revenue grew 12% on the prior year and beat budget, but gross margin fell two points and EBITDA finished below plan. Growth is being bought rather than earned &mdash; the extra revenue arrived carrying almost all of its own cost.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>If delivery cost keeps rising faster than revenue, further growth reduces profit rather than adding to it. Receivables at 113 days mean that profit is also slow to become cash.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Investigate direct cost drivers by project and department before accepting more volume at current pricing. Review pricing on the work types where margin has fallen most.</p></div></div>
+      </div></div>
     </div>
 
     <!-- 02 BUDGET VS ACTUAL -->
-    <div class="dash rv">
-      <div class="dash-head"><span class="dash-num">02</span><h3>Budget vs Actual &amp; Variance Analysis</h3></div>
+    <div class="dash rv" data-open="false">
+      <h3 class="dash-head">
+        <button class="dash-toggle" type="button" aria-expanded="false" aria-controls="fpa-p02">
+          <span class="dash-num">02</span><span class="dash-title">Budget vs Actual &amp; Variance Analysis</span><span class="dash-cue"><span class="cue-txt">View model</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+      </h3>
+      <div class="dash-body" id="fpa-p02"><div class="dash-body-in">
       <p class="purpose">A variance table is only the start. The value is in the next three columns of thinking: what moved, why it moved, and what to do about it.</p>
       <div class="flow">
         <span class="flow-step on">Budget</span><span class="flow-arrow">&rarr;</span>
@@ -478,11 +545,17 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
       </table>
       <p class="purpose" style="margin-top:20px"><strong style="color:var(--ivory);font-weight:500">Root cause.</strong> Revenue beat plan by 5.8%, but direct project cost rose 9.0% &mdash; faster than the revenue that carried it. Gross margin fell two points, so the additional revenue arrived with almost no additional gross profit attached. Payroll and operating expenses then ran ahead of plan on top, and EBITDA finished 12.9% below budget despite a good top line.</p>
       <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>The favourable revenue variance is misleading on its own. Read against direct cost, it shows a business winning work at a lower effective margin than it planned for.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>Payroll and operating expenses both ran ahead of plan while gross profit stood still &mdash; so the entire revenue gain was absorbed below the gross profit line.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Break the direct cost variance down by project to separate volume effect from rate effect. Freeze discretionary operating spend until margin recovers to plan.</p></div></div>
+      </div></div>
     </div>
 
     <!-- 03 FORECAST -->
-    <div class="dash rv">
-      <div class="dash-head"><span class="dash-num">03</span><h3>Financial Forecast &amp; Scenario Planning</h3></div>
+    <div class="dash rv" data-open="false">
+      <h3 class="dash-head">
+        <button class="dash-toggle" type="button" aria-expanded="false" aria-controls="fpa-p03">
+          <span class="dash-num">03</span><span class="dash-title">Financial Forecast &amp; Scenario Planning</span><span class="dash-cue"><span class="cue-txt">View model</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+      </h3>
+      <div class="dash-body" id="fpa-p03"><div class="dash-body-in">
       <p class="purpose">A forecast is a set of assumptions with numbers attached. Scenario planning tests which of those assumptions the business can actually survive being wrong about.</p>
       <div class="flow">
         <span class="flow-step">Historical actuals</span><span class="flow-arrow">&rarr;</span>
@@ -530,12 +603,17 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
       </table>
       <p class="purpose" style="margin-top:20px"><strong style="color:var(--ivory);font-weight:500">The point of the last row.</strong> A 30-day collection delay does nothing to profit and takes more than a million out of cash. Profit and liquidity are different questions, and a business can fail the second while passing the first.</p>
       <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>The business is more sensitive to labour cost and collection timing than to a moderate revenue fall. A 10% revenue drop costs 412 of EBITDA; a 30-day collection delay costs over a million in cash and nothing in profit.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>The downside case leaves EBITDA margin at 6.6%. Combined with a collection delay, that is a liquidity problem well before it becomes a profitability problem.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Hold a minimum cash buffer sized against the downside case, not the base case. Tighten collection terms before adding fixed cost.</p></div></div>
+      </div></div>
     </div>
 
     <!-- 04 PROJECT -->
-    <div class="dash rv">
-      <div class="dash-head"><span class="dash-num">04</span><h3>Project Financial Performance &amp; Cost Control</h3>
-        <span class="chip r">Cost overrun risk</span></div>
+    <div class="dash rv" data-open="false">
+      <h3 class="dash-head">
+        <button class="dash-toggle" type="button" aria-expanded="false" aria-controls="fpa-p04">
+          <span class="dash-num">04</span><span class="dash-title">Project Financial Performance &amp; Cost Control</span><span class="chip r">Cost overrun risk</span><span class="dash-cue"><span class="cue-txt">View model</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+      </h3>
+      <div class="dash-body" id="fpa-p04"><div class="dash-body-in">
       <p class="purpose">A single contract, viewed the way a project controller has to view it: not what has been spent, but what it will cost by completion, and whether the margin priced at tender still survives.</p>
       <div class="kpis">
         <div class="kpi"><div class="k-lbl">Contract revenue</div><div class="k-val">4,200</div><div class="k-sub flat">AED '000</div></div><div class="kpi"><div class="k-lbl">Budget at tender</div><div class="k-val">3,360</div><div class="k-sub flat">20.0% margin</div></div><div class="kpi"><div class="k-lbl">Estimate at completion</div><div class="k-val">3,680</div><div class="k-sub down">&#9660; 320 over budget</div></div><div class="kpi"><div class="k-lbl">Forecast gross profit</div><div class="k-val">520</div><div class="k-sub down">&#9660; from 840</div></div><div class="kpi"><div class="k-lbl">Forecast margin</div><div class="k-val">12.4%</div><div class="k-sub down">&#9660; &minus;7.6 pts</div></div>
@@ -566,11 +644,17 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
         </tbody>
       </table>
       <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>The project will finish 320 over its tender budget, cutting the margin from 20.0% to 12.4%. Two-thirds of the overrun is already committed rather than merely forecast &mdash; so most of it can no longer be avoided.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>Committed cost of 480 against only 260 of remaining work suggests procurement ran ahead of the programme. If scope grows further, the remaining margin absorbs it.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Escalate the variation claim on scope already delivered, and freeze further commitments until the cost-to-complete is re-based with the delivery team.</p></div></div>
+      </div></div>
     </div>
 
     <!-- 05 WORKING CAPITAL -->
-    <div class="dash rv">
-      <div class="dash-head"><span class="dash-num">05</span><h3>Working Capital &amp; Cash Conversion</h3></div>
+    <div class="dash rv" data-open="false">
+      <h3 class="dash-head">
+        <button class="dash-toggle" type="button" aria-expanded="false" aria-controls="fpa-p05">
+          <span class="dash-num">05</span><span class="dash-title">Working Capital &amp; Cash Conversion</span><span class="dash-cue"><span class="cue-txt">View model</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+      </h3>
+      <div class="dash-body" id="fpa-p05"><div class="dash-body-in">
       <p class="purpose">Profit is an opinion until it is collected. This is where the money actually sits, how long it stays there, and which balances are turning into risk.</p>
       <div class="kpis">
         <div class="kpi"><div class="k-lbl">Total receivables</div><div class="k-val">3,860</div><div class="k-sub down">24% over 60 days</div></div><div class="kpi"><div class="k-lbl">Total payables</div><div class="k-val">2,410</div><div class="k-sub flat">7% over 60 days</div></div><div class="kpi"><div class="k-lbl">DSO</div><div class="k-val">113 days</div><div class="k-sub down">collection period</div></div><div class="kpi"><div class="k-lbl">DPO</div><div class="k-val">105 days</div><div class="k-sub flat">payment period</div></div><div class="kpi"><div class="k-lbl">Cash conversion cycle</div><div class="k-val">8 days</div><div class="k-sub flat">cash tied up</div></div>
@@ -590,6 +674,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
         </tbody>
       </table>
       <div class="ins-grid"><div class="ins insight-i"><div class="i-lbl">Management insight</div><p>Half of receivables are current, but 24% sit beyond 60 days and 380 has passed 90. Payables are ageing more slowly than receivables, so the business is funding its customers.</p></div><div class="ins risk-i"><div class="i-lbl">Key risk</div><p>The 90+ bucket is where collection probability falls sharply. Held long enough, it stops being a receivable and becomes a bad debt provision.</p></div><div class="ins action-i"><div class="i-lbl">Recommended action</div><p>Prioritise collection above 60 days before chasing current balances. Check the trade licence status of every customer in the 90+ bucket &mdash; a lapsed licence often explains a stalled payment.</p></div></div>
+      </div></div>
     </div>
 
   </div>
@@ -642,51 +727,50 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
     <div class="sec-head rv"><span class="sec-num">05</span><h2>The FP&amp;A cycle</h2><span class="sec-rule"></span></div>
     <p class="intro rv">Reporting is not the end of the process &mdash; it is the start of it. This is the loop the work sits inside.</p>
     <div class="rv">
-      <svg viewBox="0 0 1100 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto" role="img" aria-label="FP&amp;A cycle: actual performance, variance analysis, root cause, forecast, scenario planning, management decision, action and monitoring">
+      <svg viewBox="0 0 1056 186" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto" role="img" aria-label="FP&amp;A cycle: actual performance, variance analysis, root cause, forecast, scenario planning, management decision, action and monitoring">
         <defs>
-          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
             <path d="M0,0 L10,5 L0,10 z" fill="#C9A227"/>
           </marker>
         </defs>
-        <g font-family="Inter, sans-serif" font-size="12" fill="#F2EFE6" text-anchor="middle">
+        <g font-family="Inter, sans-serif" text-anchor="middle">
           <g>
-            <rect x="8"   y="60" width="140" height="58" fill="none" stroke="rgba(242,239,230,0.18)"/>
-            <text x="78"  y="84" font-size="10" fill="#C9A227" letter-spacing="1.6">01</text>
-            <text x="78"  y="104">Actual performance</text>
+            <rect x="8" y="20" width="140" height="76" fill="rgba(201,162,39,0.045)" stroke="rgba(201,162,39,0.42)" stroke-width="1.3"/>
+            <text x="78" y="50" font-size="11" fill="#C9A227" letter-spacing="2">01</text>
+            <text x="78" y="75" font-size="15" fill="#F2EFE6">Actual performance</text>
           </g>
-          <line x1="152" y1="89" x2="182" y2="89" stroke="#C9A227" stroke-width="1" marker-end="url(#ar)"/>
+          <line x1="152" y1="58" x2="182" y2="58" stroke="#C9A227" stroke-width="1.8" marker-end="url(#ar)"/>
           <g>
-            <rect x="188" y="60" width="140" height="58" fill="none" stroke="rgba(242,239,230,0.18)"/>
-            <text x="258" y="84" font-size="10" fill="#C9A227" letter-spacing="1.6">02</text>
-            <text x="258" y="104">Variance analysis</text>
+            <rect x="188" y="20" width="140" height="76" fill="rgba(201,162,39,0.045)" stroke="rgba(201,162,39,0.42)" stroke-width="1.3"/>
+            <text x="258" y="50" font-size="11" fill="#C9A227" letter-spacing="2">02</text>
+            <text x="258" y="75" font-size="15" fill="#F2EFE6">Variance analysis</text>
           </g>
-          <line x1="332" y1="89" x2="362" y2="89" stroke="#C9A227" stroke-width="1" marker-end="url(#ar)"/>
+          <line x1="332" y1="58" x2="362" y2="58" stroke="#C9A227" stroke-width="1.8" marker-end="url(#ar)"/>
           <g>
-            <rect x="368" y="60" width="140" height="58" fill="none" stroke="rgba(242,239,230,0.18)"/>
-            <text x="438" y="84" font-size="10" fill="#C9A227" letter-spacing="1.6">03</text>
-            <text x="438" y="104">Root cause</text>
+            <rect x="368" y="20" width="140" height="76" fill="rgba(201,162,39,0.045)" stroke="rgba(201,162,39,0.42)" stroke-width="1.3"/>
+            <text x="438" y="50" font-size="11" fill="#C9A227" letter-spacing="2">03</text>
+            <text x="438" y="75" font-size="15" fill="#F2EFE6">Root cause</text>
           </g>
-          <line x1="512" y1="89" x2="542" y2="89" stroke="#C9A227" stroke-width="1" marker-end="url(#ar)"/>
+          <line x1="512" y1="58" x2="542" y2="58" stroke="#C9A227" stroke-width="1.8" marker-end="url(#ar)"/>
           <g>
-            <rect x="548" y="60" width="140" height="58" fill="none" stroke="rgba(242,239,230,0.18)"/>
-            <text x="618" y="84" font-size="10" fill="#C9A227" letter-spacing="1.6">04</text>
-            <text x="618" y="104">Forecast</text>
+            <rect x="548" y="20" width="140" height="76" fill="rgba(201,162,39,0.045)" stroke="rgba(201,162,39,0.42)" stroke-width="1.3"/>
+            <text x="618" y="50" font-size="11" fill="#C9A227" letter-spacing="2">04</text>
+            <text x="618" y="75" font-size="15" fill="#F2EFE6">Forecast</text>
           </g>
-          <line x1="692" y1="89" x2="722" y2="89" stroke="#C9A227" stroke-width="1" marker-end="url(#ar)"/>
+          <line x1="692" y1="58" x2="722" y2="58" stroke="#C9A227" stroke-width="1.8" marker-end="url(#ar)"/>
           <g>
-            <rect x="728" y="60" width="140" height="58" fill="none" stroke="rgba(242,239,230,0.18)"/>
-            <text x="798" y="84" font-size="10" fill="#C9A227" letter-spacing="1.6">05</text>
-            <text x="798" y="104">Scenario planning</text>
+            <rect x="728" y="20" width="140" height="76" fill="rgba(201,162,39,0.045)" stroke="rgba(201,162,39,0.42)" stroke-width="1.3"/>
+            <text x="798" y="50" font-size="11" fill="#C9A227" letter-spacing="2">05</text>
+            <text x="798" y="75" font-size="15" fill="#F2EFE6">Scenario planning</text>
           </g>
-          <line x1="872" y1="89" x2="902" y2="89" stroke="#C9A227" stroke-width="1" marker-end="url(#ar)"/>
+          <line x1="872" y1="58" x2="902" y2="58" stroke="#C9A227" stroke-width="1.8" marker-end="url(#ar)"/>
           <g>
-            <rect x="908" y="60" width="140" height="58" fill="none" stroke="rgba(201,162,39,0.55)"/>
-            <text x="978" y="84" font-size="10" fill="#C9A227" letter-spacing="1.6">06</text>
-            <text x="978" y="104">Management decision</text>
+            <rect x="908" y="20" width="140" height="76" fill="rgba(201,162,39,0.13)" stroke="#C9A227" stroke-width="1.9"/>
+            <text x="978" y="50" font-size="11" fill="#C9A227" letter-spacing="2">06</text>
+            <text x="978" y="75" font-size="15" fill="#F2EFE6">Management decision</text>
           </g>
-          <path d="M978 122 L978 168 L78 168 L78 124" fill="none" stroke="#C9A227" stroke-width="1"
-                stroke-dasharray="3 4" marker-end="url(#ar)"/>
-          <text x="528" y="192" fill="#8E99AC" font-size="11.5" letter-spacing="1.2">ACTION &amp; MONITORING &mdash; FEEDS THE NEXT CYCLE</text>
+          <path d="M978 96 L978 146 L78 146 L78 102" fill="none" stroke="#C9A227" stroke-width="1.6" stroke-dasharray="4 5" marker-end="url(#ar)"/>
+          <text x="528" y="172" fill="#C9A227" font-size="12" letter-spacing="1.6">ACTION &amp; MONITORING &mdash; FEEDS THE NEXT CYCLE</text>
         </g>
       </svg>
     </div>
@@ -740,13 +824,22 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
   <div class="shell">
     <div class="sec-head rv"><span class="sec-num">07</span><h2>Models &amp; dashboards I built</h2><span class="sec-rule"></span></div>
     <p class="intro rv">Five working systems, designed and built in Advanced Excel and Power Query. These are not practice exercises &mdash; each one was built to solve a live problem in the business and is still in daily use. Each is presented the way it is actually used: the business problem, the analysis, and the decision it supports.</p>
+    <p class="fpa-hint rv"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>Click any system to see the detail behind it.</p>
     <div class="cards">
 
-      <div class="card rv">
-        <div class="idx">01</div>
-        <h3>Cash Flow Forecast &amp; Working Capital Dashboard</h3>
-        <div class="sub">Business problem &rarr; forecast &rarr; payment and collection decisions</div>
-        <div class="builtfor">Built for Print Outs &middot; in weekly management use</div>
+      <div class="card rv" data-open="false">
+        <h3 class="card-head">
+          <button class="card-toggle" type="button" aria-expanded="false" aria-controls="model-p01">
+            <span class="ch-text">
+              <span class="idx">01</span>
+              <span class="card-title">Cash Flow Forecast &amp; Working Capital Dashboard</span>
+              <span class="sub">Business problem &rarr; forecast &rarr; payment and collection decisions</span>
+              <span class="builtfor">Built for Print Outs &middot; in weekly management use</span>
+            </span>
+            <span class="dash-cue"><span class="cue-txt">View detail</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+        </h3>
+        <div class="card-body" id="model-p01"><div class="card-body-in">
         <p>Cash used to live in a manually updated list &mdash; accurate on the day it was written, silent about what was coming. The question management asks is not what the balance is, but what it is going to be.</p>
         <p>The forecast builds itself. Receivable and supplier ageing sit in pivots and the forecast pulls straight off them with GETPIVOTDATA, mapping each ageing bucket to the month it falls due &mdash; so there is no second set of numbers to maintain. On top sits the analysis layer: collection and payment performance, working capital, cash position trend, and receivable and supplier age distribution.</p>
         <div class="insight">
@@ -754,13 +847,22 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
           <p>Drives three decisions every week &mdash; which supplier is paid first, which customer is chased, and whether a planned purchase can wait.</p>
         </div>
         <div class="tags"><span class="tag">Cash forecasting</span><span class="tag">Working capital</span><span class="tag">AR / AP ageing</span><span class="tag">Power Query</span></div>
+        </div></div>
       </div>
 
-      <div class="card rv">
-        <div class="idx">02</div>
-        <h3>Employee Advance &amp; Gratuity Exposure Model</h3>
-        <div class="sub">Business problem &rarr; per-employee forecast &rarr; exposure management</div>
-        <div class="builtfor">Built for Print Outs &middot; reviewed monthly with management</div>
+      <div class="card rv" data-open="false">
+        <h3 class="card-head">
+          <button class="card-toggle" type="button" aria-expanded="false" aria-controls="model-p02">
+            <span class="ch-text">
+              <span class="idx">02</span>
+              <span class="card-title">Employee Advance &amp; Gratuity Exposure Model</span>
+              <span class="sub">Business problem &rarr; per-employee forecast &rarr; exposure management</span>
+              <span class="builtfor">Built for Print Outs &middot; reviewed monthly with management</span>
+            </span>
+            <span class="dash-cue"><span class="cue-txt">View detail</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+        </h3>
+        <div class="card-body" id="model-p02"><div class="card-body-in">
         <p>A salary advance is an unsecured receivable whose only collateral is that employee's end-of-service gratuity. Management's principle is that nobody should finish their service and find there is nothing left to take home &mdash; which means someone has to know, per person, whether the gratuity still covers what is owed.</p>
         <p>The model applies UAE mainland gratuity rules &mdash; basic salary only, nothing under one year, 21 days per year for the first five and 30 after, pro-rated and capped at two years' basic &mdash; against each balance and recovery rate, and returns the month coverage is reached.</p>
         <div class="insight">
@@ -768,13 +870,22 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
           <p>Gratuity cannot be pooled. One employee's surplus does not cover another's shortfall, so aggregate coverage flatters the position. The model sums each shortfall separately &mdash; that is the real unsecured exposure.</p>
         </div>
         <div class="tags"><span class="tag">Exposure modelling</span><span class="tag">Forecast engine</span><span class="tag">UAE Labour Law</span><span class="tag">Risk bands</span></div>
+        </div></div>
       </div>
 
-      <div class="card rv">
-        <div class="idx">03</div>
-        <h3>Compliance &amp; Exposure Tracker</h3>
-        <div class="sub">Built and used internally as the HR &amp; Administration Dashboard</div>
-        <div class="builtfor">Built for Print Outs &middot; also packaged as a reusable template</div>
+      <div class="card rv" data-open="false">
+        <h3 class="card-head">
+          <button class="card-toggle" type="button" aria-expanded="false" aria-controls="model-p03">
+            <span class="ch-text">
+              <span class="idx">03</span>
+              <span class="card-title">Compliance &amp; Exposure Tracker</span>
+              <span class="sub">Built and used internally as the HR &amp; Administration Dashboard</span>
+              <span class="builtfor">Built for Print Outs &middot; also packaged as a reusable template</span>
+            </span>
+            <span class="dash-cue"><span class="cue-txt">View detail</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+        </h3>
+        <div class="card-body" id="model-p03"><div class="card-body-in">
         <p>Renewals used to live in calendar reminders and in memory. That holds until something slips &mdash; an expired vehicle registration is a fine and black points, a missed notice window on a lease removes the chance to negotiate, and a credit customer whose trade licence quietly lapsed is a receivable that may never be collected.</p>
         <p>One formula-driven workbook now tracks every expiry in the business: employee documents, company licences, leases, insurance policies and customer trade licences on the credit book &mdash; with today, tomorrow, 7-day and 30-day tiers plus an overdue list.</p>
         <div class="insight">
@@ -782,13 +893,22 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
           <p>Expiry dates are money: fines avoided, negotiation windows caught in time, and credit exposure spotted before it becomes bad debt.</p>
         </div>
         <div class="tags"><span class="tag">Credit exposure</span><span class="tag">Compliance control</span><span class="tag">Renewal tracking</span></div>
+        </div></div>
       </div>
 
-      <div class="card rv">
-        <div class="idx">04</div>
-        <h3>Attendance &amp; Overtime Control</h3>
-        <div class="sub">Payroll cost control through a rules engine</div>
-        <div class="builtfor">Built for Print Outs &middot; feeds the monthly payroll run</div>
+      <div class="card rv" data-open="false">
+        <h3 class="card-head">
+          <button class="card-toggle" type="button" aria-expanded="false" aria-controls="model-p04">
+            <span class="ch-text">
+              <span class="idx">04</span>
+              <span class="card-title">Attendance &amp; Overtime Control</span>
+              <span class="sub">Payroll cost control through a rules engine</span>
+              <span class="builtfor">Built for Print Outs &middot; feeds the monthly payroll run</span>
+            </span>
+            <span class="dash-cue"><span class="cue-txt">View detail</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+        </h3>
+        <div class="card-body" id="model-p04"><div class="card-body-in">
         <p>Overtime is labour cost, and it is decided by whatever the biometric export happens to say. Rebuilding it by hand each month was slow and it had to be right.</p>
         <p>Now the raw export is pasted in and the rest calculates itself &mdash; duty hours, overtime, and the monthly summary that goes to payroll. The rules carry the logic: a 45-minute grace period each side for production staff, so early arrival is not paid and late departure is not overtime; every minute on a Sunday or holiday counted as overtime; overnight shifts matched to the prior day and capped at 20 hours, past which it flags manual verification rather than guessing.</p>
         <div class="insight">
@@ -796,19 +916,29 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
           <p>Turns raw attendance into a labour cost figure management can question &mdash; by employee, by department, by month. One paste, and the month is done.</p>
         </div>
         <div class="tags"><span class="tag">Labour cost control</span><span class="tag">Payroll input</span><span class="tag">Rules engine</span></div>
+        </div></div>
       </div>
 
-      <div class="card rv wide">
-        <div class="idx">05</div>
-        <h3>Finance Operating System</h3>
-        <div class="sub">The month-end close as a control environment, not a memory test</div>
-        <div class="builtfor">Self-built &middot; shared as a template with other finance professionals</div>
+      <div class="card rv wide" data-open="false">
+        <h3 class="card-head">
+          <button class="card-toggle" type="button" aria-expanded="false" aria-controls="model-p05">
+            <span class="ch-text">
+              <span class="idx">05</span>
+              <span class="card-title">Finance Operating System</span>
+              <span class="sub">The month-end close as a control environment, not a memory test</span>
+              <span class="builtfor">Self-built &middot; shared as a template with other finance professionals</span>
+            </span>
+            <span class="dash-cue"><span class="cue-txt">View detail</span><svg class="dash-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+        </h3>
+        <div class="card-body" id="model-p05"><div class="card-body-in">
         <p>I built this one to learn &mdash; to understand the close as a whole system rather than a list of tasks I happened to remember. It runs the full control environment in one file: daily and weekly task tracking, the month-end close checklist, bank reconciliation, VAT checklist, payroll review, fixed assets, balance sheet review, customer and supplier statement trackers, and a KPI dashboard on top.</p>
         <div class="insight">
           <div class="lbl">Why it matters for FP&amp;A</div>
           <p>Forecasting is only as good as the close underneath it. A close that runs on a documented system rather than memory is what makes the analysis on top of it trustworthy &mdash; and it is what frees the days that analysis needs.</p>
         </div>
         <div class="tags"><span class="tag">Month-end close</span><span class="tag">Internal controls</span><span class="tag">KPI reporting</span><span class="tag">Excel</span></div>
+        </div></div>
       </div>
 
     </div>
@@ -1011,7 +1141,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
     <div class="two-col rv" style="margin-top:56px">
       <div>
         <div class="skill-block">
-          <h4>Education</h4>
+          <h4 class="hd-lg"><svg class="hd-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5 12 3.5 22 8.5 12 13.5Z"/><path d="M6.5 10.8V16c0 1.7 2.5 3 5.5 3s5.5-1.3 5.5-3v-5.2"/><path d="M22 8.5v5.5"/></svg>Education</h4>
           <div class="plist" style="border-top:none">
             <div class="prow"><div><h4>Bachelor of Commerce (B.Com)</h4><div class="meta">Mangalore University, India &mdash; First Class. Financial accounting, management accounting, business law, economics and taxation.</div></div><div class="yr">2014 &mdash; 2017</div></div>
             <div class="prow"><div><h4>Higher Secondary &mdash; Commerce</h4><div class="meta">Government VHSS Ponkunnam, Kerala, India</div></div><div class="yr">2007 &mdash; 2009</div></div>
@@ -1020,7 +1150,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
       </div>
       <div>
         <div class="skill-block">
-          <h4>Certifications</h4>
+          <h4 class="hd-lg"><svg class="hd-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="5.5"/><path d="M8.6 13.1 7.2 21l4.8-2.4 4.8 2.4-1.4-7.9"/></svg>Certifications</h4>
           <div class="plist" style="border-top:none">
             <div class="prow"><div><h4>Cash Flow Cycles and Analysis</h4><div class="meta">NASBA CPE Certified &mdash; 2.40 CPE credits</div></div><div class="yr">2026</div></div>
             <div class="prow"><div><h4>SAP Financials Essential Training</h4><div class="meta">NASBA</div></div><div class="yr">2026</div></div>
@@ -1028,7 +1158,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
           </div>
         </div>
         <div class="skill-block">
-          <h4>Languages</h4>
+          <h4 class="hd-lg"><svg class="hd-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.4 2.9 2.4 15.1 0 18"/><path d="M12 3c-2.4 2.9-2.4 15.1 0 18"/></svg>Languages</h4>
           <div class="pill-wrap">
             <span class="pill">English &mdash; professional</span><span class="pill">Hindi &mdash; professional</span><span class="pill">Tamil &mdash; full professional</span><span class="pill">Malayalam &mdash; native</span><span class="pill">Kannada &mdash; working</span>
           </div>
@@ -1092,6 +1222,37 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
     })
   },{threshold:.25});
   secs.forEach(function(s){if(s)so.observe(s)});
+})();
+</script>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('#fpa .dash-toggle');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var dash = btn.closest('.dash');
+      var open = dash.getAttribute('data-open') === 'true';
+      dash.setAttribute('data-open', open ? 'false' : 'true');
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      var txt = btn.querySelector('.cue-txt');
+      if (txt) { txt.textContent = open ? 'View model' : 'Hide model'; }
+    });
+  });
+  document.querySelectorAll('#models .card-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.card');
+      var open = card.getAttribute('data-open') === 'true';
+      card.setAttribute('data-open', open ? 'false' : 'true');
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      var t = btn.querySelector('.cue-txt');
+      if (t) { t.textContent = open ? 'View detail' : 'Hide detail'; }
+    });
+  });
+  var h = window.location.hash.replace('#','');
+  if (h) {
+    var t = document.querySelector('#fpa [aria-controls="' + h + '"]');
+    if (t) { t.click(); t.scrollIntoView({block:'start'}); }
+  }
 })();
 </script>
 </body>
