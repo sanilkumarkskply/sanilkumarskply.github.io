@@ -127,6 +127,9 @@ h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.2
 .card .builtfor{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);
   padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--hair)}
 .card p{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+.card .dl{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:18px;padding-top:16px;border-top:1px solid var(--hair)}
+.card .dl .fmt{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2)}
+.dl-note{font-size:12.5px;color:var(--muted-2);margin-top:26px;max-width:70ch;line-height:1.7}
 .card .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
 .card .tag{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);
   border:1px solid var(--hair);padding:4px 10px}
@@ -177,6 +180,8 @@ h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.2
 
 /* rows */
 .plist{border-top:1px solid var(--hair)}
+.cert-grp{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);padding:22px 0 0;border-top:1px solid var(--hair)}
+.cert-grp:first-child{border-top:none;padding-top:0}
 .prow{display:grid;grid-template-columns:1fr 190px;gap:22px;padding:20px 0;
   border-bottom:1px solid var(--hair);align-items:start}
 .prow h4{font-size:15.5px;font-weight:400;color:var(--ivory)}
@@ -374,7 +379,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
   <a href="#partnering">Partnering</a>
   <a href="#kpis">KPIs</a>
   <a href="#experience">Experience</a>
-  <a href="#writing">Writing</a>
+  <a href="#writing">Resources</a>
   <a href="#tools">Tools</a>
   <a href="#contact">Contact</a>
 </div>
@@ -392,7 +397,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
           <a class="btn" href="Sanil_Kumar_CV.pdf" target="_blank" rel="noopener">View CV (PDF)</a>
           <a class="btn" href="#fpa">FP&amp;A dashboards</a>
           <a class="btn" href="#models">Models &amp; dashboards</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/sanil-kumar-a43699145" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/sanilkumar-finance" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn ghost" href="#contact">Contact</a>
         </div>
       </div>
@@ -1091,8 +1096,8 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
 <!-- WRITING -->
 <section id="writing">
   <div class="shell">
-    <div class="sec-head rv"><span class="sec-num">11</span><h2>Technical writing &amp; knowledge sharing</h2><span class="sec-rule"></span></div>
-    <p class="intro rv">UAE Corporate Tax is new, and most accountants filing a return have never filed one before. I file mine, so I wrote down how it works &mdash; then built the workbook that goes with it.</p>
+    <div class="sec-head rv"><span class="sec-num">11</span><h2>Guides &amp; resources</h2><span class="sec-rule"></span></div>
+    <p class="intro rv">I write down what I learn when I do something for the first time &mdash; filing a Corporate Tax return, reading a market, building a model &mdash; because the notes that would have helped me usually do not exist. Guides, study notes and findings are published here, free to download.</p>
     <div class="cards">
       <div class="card rv">
         <div class="idx">01</div>
@@ -1101,6 +1106,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
         <p>A walkthrough of all seven EmaraTax steps in portal order, for mainland and free zone companies. It explains what each question means, where the answer comes from, and why it is asked &mdash; so the reader can answer correctly even when their situation differs from the examples.</p>
         <p>It covers what only shows up once you have actually filed: the double-counting trap in the accounting schedules, the description field that truncates silently, why a greyed-out election is not a bug, and why testing the connected person threshold on a combined total is the error that catches almost everyone.</p>
         <div class="tags"><span class="tag">UAE Corporate Tax</span><span class="tag">EmaraTax</span><span class="tag">Free zone &amp; mainland</span></div>
+        <div class="dl"><a class="btn ghost" href="uae-corporate-tax-emaratax-filing-guide.pdf" download>Download guide (PDF)</a><span class="fmt">PDF &middot; 11 pages &middot; September 2026</span></div>
       </div>
       <div class="card rv">
         <div class="idx">02</div>
@@ -1111,7 +1117,17 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
         <p>Every rate and threshold sits in one reference sheet with its legal source, so when the law moves you change one cell rather than forty formulas &mdash; which mattered when the Small Business Relief sunset was extended by ministerial decision.</p>
         <div class="tags"><span class="tag">Excel</span><span class="tag">Tax computation</span><span class="tag">Control checks</span></div>
       </div>
+      <div class="card rv wide">
+        <div class="idx">03</div>
+        <h3>Careers with Hotels in Dubai &mdash; A Complete Career Guide</h3>
+        <div class="sub">Research and market notes, written for job seekers</div>
+        <p>A 15-page guide to hotel employment in Dubai: how a hotel is structured across thirteen departments, the roles inside each one, the October-to-December hiring window and why it exists, the four channels vacancies actually appear on, and indicative salary and allowance ranges by level.</p>
+        <p>The finance angle runs through it. Hotel finance roles &mdash; income audit, cost control, paymaster, chief accountant &mdash; are set out with the systems and skills each one asks for, and the section on package structure explains why gratuity is calculated on basic salary rather than the headline figure. Salary ranges are my own estimates, compiled from published salary guides and live advertisements; every source is listed in the guide.</p>
+        <div class="tags"><span class="tag">Career research</span><span class="tag">UAE market</span><span class="tag">Compensation structure</span></div>
+        <div class="dl"><a class="btn ghost" href="dubai-hotel-careers-guide.pdf" download>Download guide (PDF)</a><span class="fmt">PDF &middot; 15 pages &middot; August 2026</span></div>
+      </div>
     </div>
+    <p class="dl-note rv">These materials are written from my own filing experience and are shared for general information. They are not tax advice, and UAE tax law changes &mdash; check the current position with the Federal Tax Authority or a registered tax agent before relying on anything here for a live return.</p>
   </div>
 </section>
 
@@ -1152,9 +1168,20 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
         <div class="skill-block">
           <h4 class="hd-lg"><svg class="hd-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="5.5"/><path d="M8.6 13.1 7.2 21l4.8-2.4 4.8 2.4-1.4-7.9"/></svg>Certifications</h4>
           <div class="plist" style="border-top:none">
+            <div class="cert-grp">Financial planning &amp; analysis</div>
+            <div class="prow"><div><h4>Accounting Foundations: Budgeting</h4><div class="meta">NASBA &mdash; 2.60 CPE credits</div></div><div class="yr">Aug 2026</div></div>
             <div class="prow"><div><h4>Cash Flow Cycles and Analysis</h4><div class="meta">NASBA CPE Certified &mdash; 2.40 CPE credits</div></div><div class="yr">2026</div></div>
+            <div class="cert-grp">Business intelligence</div>
+            <div class="prow"><div><h4>Power BI Essential Training</h4><div class="meta">NASBA &mdash; 7.20 CPE credits</div></div><div class="yr">Aug 2026</div></div>
+            <div class="prow"><div><h4>Excel Power Tools for FP&amp;A: Power Query and PowerPivot</h4><div class="meta">LinkedIn Learning</div></div><div class="yr">Aug 2026</div></div>
+            <div class="cert-grp">Project &amp; portfolio management</div>
+            <div class="prow"><div><h4>Project Portfolio Management Foundations</h4><div class="meta">NASBA &mdash; 3.00 CPE credits</div></div><div class="yr">Aug 2026</div></div>
+            <div class="prow"><div><h4>Managing Project Benefits</h4><div class="meta">PMI Registered Education Provider &mdash; 1.25 PDU</div></div><div class="yr">Aug 2026</div></div>
+            <div class="cert-grp">Finance systems</div>
             <div class="prow"><div><h4>SAP Financials Essential Training</h4><div class="meta">NASBA</div></div><div class="yr">2026</div></div>
             <div class="prow"><div><h4>SAP ERP Essential Training</h4><div class="meta">LinkedIn Learning</div></div><div class="yr">2026</div></div>
+            <div class="cert-grp">Leadership</div>
+            <div class="prow"><div><h4>Accountability for Leaders: Navigating Diversity, Equity and Inclusion</h4><div class="meta">PMI Registered Education Provider &mdash; 0.75 PDU</div></div><div class="yr">Aug 2026</div></div>
           </div>
         </div>
         <div class="skill-block">
@@ -1181,7 +1208,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
     <div class="contact-grid rv">
       <a class="cbox" href="mailto:sanilkumarskply@gmail.com"><div class="lbl">Email</div><div class="val">sanilkumarskply@gmail.com</div></a>
       <a class="cbox" href="tel:+971588171660"><div class="lbl">Phone</div><div class="val">+971 58 817 1660</div></a>
-      <a class="cbox" href="https://www.linkedin.com/in/sanil-kumar-a43699145" target="_blank" rel="noopener"><div class="lbl">LinkedIn</div><div class="val">in/sanil-kumar-a43699145</div></a>
+      <a class="cbox" href="https://www.linkedin.com/in/sanilkumar-finance" target="_blank" rel="noopener"><div class="lbl">LinkedIn</div><div class="val">in/sanilkumar-finance</div></a>
       <a class="cbox" href="Sanil_Kumar_CV.pdf" target="_blank" rel="noopener"><div class="lbl">Curriculum vitae</div><div class="val">View &amp; download CV (PDF)</div></a>
     </div>
     <footer>
@@ -1194,7 +1221,7 @@ footer{padding:44px 0 40px;border-top:1px solid var(--hair)}
         </div>
         <div class="foot-links">
           <a href="#value">Value</a><a href="#models">Models</a><a href="#experience">Experience</a>
-          <a href="https://www.linkedin.com/in/sanil-kumar-a43699145" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sanilkumar-finance" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:sanilkumarskply@gmail.com">Email</a><a href="Sanil_Kumar_CV.pdf" download>Download CV</a>
         </div>
       </div>
